@@ -5,20 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.3.2, node version 20.14.0, yarn 1.22
 
-* System dependencies
+* Database SQLite 3 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* To make it work run `yarn install`, `buldle install`, `rails db:create`
