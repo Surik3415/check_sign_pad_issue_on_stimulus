@@ -25,11 +25,9 @@ export default class extends Controller {
     this.inputTarget.value = this.signaturePad.toDataURL("image/svg+xml")
   }
 
-  // Return svg string without converting to base64
   toSVG() {
     const svgData = this.signaturePad.toDataURL("image/svg+xml")
     console.log(svgData)
-    this.svgUrlTarget.textContent = svgData
   }
 
 
@@ -41,5 +39,15 @@ export default class extends Controller {
     this.canvasTarget.width = this.canvasTarget.offsetWidth * ratio
     this.canvasTarget.height = this.canvasTarget.offsetHeight * ratio
     this.canvasTarget.getContext("2d").scale(ratio, ratio)
+  }
+
+  toData() {
+    console.log(this.signaturePad.toData())
+    return this.signaturePad.toData()
+  }
+
+  isEmpty() {
+    console.log(this.signaturePad.isEmpty())
+    return this.signaturePad.isEmpty()
   }
 }

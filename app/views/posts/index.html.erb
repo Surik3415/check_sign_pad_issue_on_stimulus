@@ -2,13 +2,18 @@
       <div class="col">
         <h1 class="display-4">Signature Pad Example</h1>
 
-        <!-- Define your canvas and input elements -->
         <%= tag.section class:"mt-4", data: {controller: "signature"} do %>
         
           <canvas data-target="signature.canvas" class="border border-dark"></canvas>
           <input type="hidden" data-target="signature.input">
 
-          <button data-action="click->signature#clear" class="btn btn-primary mt-3">Clear Signature</button>
+          <div class="d-flex gap-3">
+            <button class="btn btn-primary" data-action="click->signature#clear">Clear Signature</button>
+            <button class="btn btn-success" data-action="click->signature#toSVG">Save as SVG</button>
+            <button class="btn btn-secondary" data-action="click->signature#isEmpty">Is empty?</button>
+            <button class="btn btn-info" data-action="click->signature#toData">Get data as arr</button>
+          </div>
+
         <% end %>
       </div>
     </div>
