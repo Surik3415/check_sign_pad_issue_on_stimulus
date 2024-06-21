@@ -1,0 +1,14 @@
+    <div class="row">
+      <div class="col">
+        <h1 class="display-4">Signature Pad Example</h1>
+
+        <!-- Define your canvas and input elements -->
+        <%= tag.section class:"mt-4", data: {controller: "signature"} do %>
+        
+          <canvas data-target="signature.canvas" class="border border-dark"></canvas>
+          <input type="hidden" data-target="signature.input">
+
+          <button data-action="click->signature#clear" class="btn btn-primary mt-3">Clear Signature</button>
+        <% end %>
+      </div>
+    </div>
